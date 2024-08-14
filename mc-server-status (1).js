@@ -41,7 +41,7 @@
             #server-info {
                 display: inline-flex;
                 align-items: center;
-                background: url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/c/c1/Dirt_background_JE2.png/revision/latest?cb=20210507124914');
+                background: url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/c/c1/Dirt_background_JE2.webp/revision/latest?cb=20210507124914');
                 padding: 10px;
                 border-radius: 8px;
                 width: auto; /* Dynamic width */
