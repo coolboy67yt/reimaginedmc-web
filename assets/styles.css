@@ -6,6 +6,7 @@
     text-align: center; /* Centers text within its container */
     background-image: url("img/backgrounds/channels4_banner.jpg"); /*temporary image*/
     background-repeat: no-repeat;
+    background-size: cover;
     color: white;
 }
 
