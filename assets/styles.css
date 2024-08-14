@@ -4,7 +4,7 @@
     align-items: center; /* Centers content vertically */
     height: 500px; /* Ensures the banner takes up the full height of the viewport */
     text-align: center; /* Centers text within its container */
-    background-image: url("channels4_banner.jpg"); /*temporary image*/
+    background-image: url("img/backgrounds/channels4_banner.jpg"); /*temporary image*/
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
