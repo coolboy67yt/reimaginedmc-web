@@ -41,7 +41,7 @@
             #server-info {
                 display: inline-flex;
                 align-items: center;
-                background: url('img/backgrounds/Dirt_background_JE2.webp');
+                background: url('assets/img/backgrounds/Dirt_background_JE2.webp');
                 padding: 10px;
                 border-radius: 8px;
                 width: auto; /* Dynamic width */
