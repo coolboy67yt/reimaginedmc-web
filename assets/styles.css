@@ -20,7 +20,7 @@
     object-fit: cover;
     z-index: -1;
     pointer-events: none; /* Allows interactions with content on top */
-    filter: blur(10px); /* Adjust the value for the desired blur effect */
+    filter: blur(5px); /* Adjust the value for the desired blur effect */
 }
 
 .banner section {
