@@ -4,7 +4,6 @@
     align-items: center; /* Centers content vertically */
     height: 500px; /* Ensures the banner takes up the full height of the viewport */
     text-align: center; /* Centers text within its container */
-    background-image: url("img/screenshots/spawn2.png");
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -17,7 +16,7 @@
     top: 50%;
     left: 50%;
     width: 100%;
-    height: 100%;
+    height: 500px;
     object-fit: cover;
     transform: translate(-50%, -50%);
     z-index: -1;
