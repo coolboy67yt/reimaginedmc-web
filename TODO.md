@@ -1,0 +1,1 @@
+- take code from unblocgameiguess and use it for showcase/news pages
