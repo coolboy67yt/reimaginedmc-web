@@ -32,6 +32,8 @@ function addFooter() {
                 <p><a href="https://www.ebay.com/str/flyinofftheshelf"><i style="color: white" class="fa-solid fa-bag-shopping"></i></a> | <a href="https://patreon.com/pacerman29"><i style="color: white" class="fa-brands fa-patreon"></i></a> | <a href="https://twitch.tv/pacermann29"><i style="color: white" class="fa-brands fa-twitch"></i></a> | <a href="https://www.youtube.com/@pacerman2952"><i style="color: white" class="fa-brands fa-youtube"></i></a> | <a href="https://github.com/coolboy67yt/reimaginedmc-web"><i style="color: white" class="fa-brands fa-github"></i></a>
             </div>
         </footer>
+
+        <script src="https://kit.fontawesome.com/2ff1179492.js" crossorigin="anonymous"></script>
     `;
 
     // Create a container for the footer
