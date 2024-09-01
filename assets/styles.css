@@ -1,3 +1,10 @@
+            @font-face {
+                font-family: 'Monocraft';
+                src: url('https://github.com/IdreesInc/Monocraft/releases/download/v4.0/Monocraft.ttc') format('truetype-collection');
+                font-weight: normal;
+                font-style: normal;
+            }
+
 .banner {
     display: flex;
     justify-content: center; /* Centers content horizontally */
@@ -34,7 +41,7 @@
 
 
 p, h1, h2, h3, h4, h5, h6 {
-    font-family: Arial, sans-serif;
+    font-family: Monocraft;
     color: white;
 }
 
@@ -42,7 +49,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Monocraft;
     margin: 0;
     padding: 0;
     background-color: #1a1a1a;
