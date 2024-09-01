@@ -128,4 +128,6 @@
             serverInfoElement.classList.add('offline');
         }
     }
-}    
+}
+    
+customElements.define('minecraft-server', MinecraftServerElement);
