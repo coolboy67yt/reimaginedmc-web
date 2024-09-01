@@ -125,4 +125,5 @@ footer {
 .server-description p {
     max-width: 550px; /* Adjust this value to your desired width */
     word-wrap: break-word; /* Ensures text wraps within the specified width */
+    display: inline-block;         
 }
