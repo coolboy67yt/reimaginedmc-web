@@ -85,7 +85,7 @@
 
     async checkServerStatus(src) {
         const statusUrl = `https://api.mcsrvstat.us/2/${src}`;
-        const faviconUrl = 'img/minefort.png';  // Use the static image
+        const faviconUrl = 'assets/img/minefort.png';  // Use the static image
     
         try {
             // Fetch server status
@@ -129,5 +129,5 @@
         }
     }
 }
-    
+
 customElements.define('minecraft-server', MinecraftServerElement);
