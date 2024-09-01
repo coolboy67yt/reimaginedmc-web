@@ -124,8 +124,6 @@ footer {
 
 .server-description p {
     max-width: 550px; /* Adjust this value to your desired width */
-    margin: 0 auto; /* Centers the paragraph horizontally */
     padding: 10px; /* Adds some padding around the text */
-    line-height: 0.2; /* Adjusts line height for readability */
     word-wrap: break-word; /* Ensures text wraps within the specified width */
 }
