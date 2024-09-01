@@ -85,34 +85,29 @@
 
     async checkServerStatus(src) {
         const statusUrl = `https://api.mcsrvstat.us/2/${src}`;
-        const faviconUrl = `https://eu.mc-api.net/v3/server/favicon/${src}`;
-
+        const faviconUrl = 'img/minefort.png';  // Use the static image
+    
         try {
             // Fetch server status
             const statusResponse = await fetch(statusUrl);
             const statusData = await statusResponse.json();
-            
-            // Fetch server favicon
-            const faviconResponse = await fetch(faviconUrl);
-            const faviconBlob = await faviconResponse.blob();
-            const faviconUrlObject = URL.createObjectURL(faviconBlob);
-
+    
             const serverInfoElement = this.shadowRoot.getElementById('server-info');
             const nameElement = this.shadowRoot.getElementById('server-name');
             const motdElement = this.shadowRoot.getElementById('motd');
             const serverIconElement = this.shadowRoot.getElementById('server-icon');
-
+    
             if (statusData.online) {
                 nameElement.textContent = statusData.hostname || src;
-
+    
                 const motdHtml = statusData.motd.html;
                 motdElement.innerHTML = motdHtml.join(' ');
-
+    
                 // Set title to indicate online status
                 serverInfoElement.setAttribute('title', 'Online');
-
-                serverIconElement.src = faviconUrlObject;
-
+    
+                serverIconElement.src = faviconUrl;
+    
                 serverInfoElement.classList.add('online');
                 serverInfoElement.classList.remove('offline');
             } else {
@@ -122,8 +117,8 @@
                 serverInfoElement.setAttribute('title', 'Offline');
                 
                 motdElement.innerHTML = 'Server is offline!';
-                serverIconElement.src = '';
-
+                serverIconElement.src = '';  // Clear the icon when offline
+    
                 serverInfoElement.classList.add('offline');
                 serverInfoElement.classList.remove('online');
             }
@@ -133,6 +128,4 @@
             serverInfoElement.classList.add('offline');
         }
     }
-}
-
-customElements.define('minecraft-server', MinecraftServerElement);
+}    
