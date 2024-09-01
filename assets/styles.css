@@ -17,7 +17,9 @@
     overflow: hidden; /* Ensures the video stays within the container */
 }
 
-
+section {
+    background-color: rgba(11, 11, 11, 0.3);
+}
 #background-video {
     top: -10px;
     position: absolute;
