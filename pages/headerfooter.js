@@ -3,7 +3,7 @@ function addNavbar() {
     const navHTML = `
         <nav>
             <div class="logo">
-                <a href="../home.html"><img src="assets/img/logo.png" width="150px"></a>
+                <a href="../home.html"><img src="../assets/img/logo.png" width="150px"></a>
             </div>
             <ul class="nav-links">
                 <li><a href="about.html">About</a></li>
