@@ -1,4 +1,4 @@
-   class MinecraftServerElement extends HTMLElement {
+class MinecraftServerElement extends HTMLElement {
     constructor() {
         super();
 
@@ -10,18 +10,18 @@
         const serverIcon = document.createElement('img');
         const textContainer = document.createElement('div');
         const serverName = document.createElement('div');
-        const motd = document.createElement('div');
+        const playerCount = document.createElement('div');
 
         // Add classes to elements
         container.setAttribute('id', 'server-info');
         serverIcon.setAttribute('id', 'server-icon');
         textContainer.setAttribute('id', 'text-container');
         serverName.setAttribute('id', 'server-name');
-        motd.setAttribute('id', 'motd');
+        playerCount.setAttribute('id', 'player-count');
 
         // Append elements to the text container
         textContainer.appendChild(serverName);
-        textContainer.appendChild(motd);
+        textContainer.appendChild(playerCount);
         
         // Append elements to the main container
         container.appendChild(serverIcon);
@@ -61,7 +61,7 @@
                 font-size: 18px;
                 color: white;
             }
-            #motd {
+            #player-count {
                 font-family: 'Monocraft', sans-serif;
                 font-size: 14px;
                 color: white;
@@ -94,14 +94,14 @@
     
             const serverInfoElement = this.shadowRoot.getElementById('server-info');
             const nameElement = this.shadowRoot.getElementById('server-name');
-            const motdElement = this.shadowRoot.getElementById('motd');
+            const playerCountElement = this.shadowRoot.getElementById('player-count');
             const serverIconElement = this.shadowRoot.getElementById('server-icon');
     
             if (statusData.online) {
                 nameElement.textContent = statusData.hostname || src;
     
-                const motdHtml = statusData.motd.html;
-                motdElement.innerHTML = motdHtml.join(' ');
+                // Display number of players online
+                playerCountElement.textContent = `Players online: ${statusData.players.online}/${statusData.players.max}`;
     
                 // Set title to indicate online status
                 serverInfoElement.setAttribute('title', 'Online');
@@ -116,7 +116,7 @@
                 // Set title to indicate offline status
                 serverInfoElement.setAttribute('title', 'Offline');
                 
-                motdElement.innerHTML = 'Server is offline!';
+                playerCountElement.textContent = 'Server is offline!';
                 serverIconElement.src = '';  // Clear the icon when offline
     
                 serverInfoElement.classList.add('offline');
