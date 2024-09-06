@@ -67,7 +67,7 @@ class MinecraftServerElement extends HTMLElement {
                 color: white;
             }
             .online {
-                outline: 4px solid green;
+                outline: 4px solid lime;
             }
             .offline {
                 outline: 4px solid red;
