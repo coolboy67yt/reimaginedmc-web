@@ -1,0 +1,9 @@
+{
+    "redirects": [
+        {
+            "source": "/pages/pages/(.*)",
+            "destination": "/pages/$1",
+            "statusCode": 301
+        }
+    ]
+}
