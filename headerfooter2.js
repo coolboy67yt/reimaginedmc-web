@@ -23,23 +23,17 @@ function addNavbar() {
     document.body.insertBefore(navContainer, document.body.firstChild);
 }
 
-// Function to create and insert the footer at the bottom of the body
+
+// Function to fetch and insert the footer HTML from a txt file
 function addFooter() {
-    const footerHTML = `
-        <footer>
-            <p>ReimaginedMC is owned by Pacerman29.</p>
-            <div class="link_icons">
-                <p><a href="https://www.ebay.com/str/flyinofftheshelf"><i style="color: white" class="fa-solid fa-bag-shopping"></i></a> | <a href="https://patreon.com/pacerman29"><i style="color: white" class="fa-brands fa-patreon"></i></a> | <a href="https://twitch.tv/pacermann29"><i style="color: white" class="fa-brands fa-twitch"></i></a> | <a href="https://www.youtube.com/@pacerman2952"><i style="color: white" class="fa-brands fa-youtube"></i></a> | <a href="https://github.com/coolboy67yt/reimaginedmc-web"><i style="color: white" class="fa-brands fa-github"></i></a>
-            </div>
-        </footer>
-    `;
-
-    // Create a container for the footer
-    const footerContainer = document.createElement('div');
-    footerContainer.innerHTML = footerHTML;
-
-    // Insert the footer at the bottom of the body
-    document.body.appendChild(footerContainer);
+    fetch('assets/footer.txt') // Adjusted path to assets/footer.txt
+        .then(response => response.text())
+        .then(footerHTML => {
+            const footerElement = document.createElement('div');
+            footerElement.innerHTML = footerHTML;
+            document.body.appendChild(footerElement);
+        })
+        .catch(error => console.error('Error fetching footer:', error));
 }
 
 // Add the navbar and footer when the DOM is fully loaded
@@ -47,3 +41,20 @@ document.addEventListener('DOMContentLoaded', () => {
     addNavbar();
     addFooter();
 });
+
+const navLinks = document.querySelector('.nav-links');
+const originalContent = navLinks.innerHTML;  // Store the original content
+
+function handleResize() {
+    if (window.innerWidth <= 634) {
+        navLinks.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    } else {
+        navLinks.innerHTML = originalContent;  // Restore original content when screen is larger
+    }
+}
+
+// Check on page load
+handleResize();
+
+// Check on window resize
+window.addEventListener('resize', handleResize);
