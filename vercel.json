@@ -4,6 +4,11 @@
             "source": "/pages/pages/(.*)",
             "destination": "/pages/$1",
             "statusCode": 301
+        },
+        {
+            "source": "/pages/assets/img/logo.png",
+            "destination": "/assets/img/logo.png",
+            "statusCode": 301
         }
     ]
 }
