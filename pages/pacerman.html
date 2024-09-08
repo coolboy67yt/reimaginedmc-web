@@ -25,5 +25,32 @@
 
 <script src="../headerfooter.js"></script>
 <script src="../assets/mc-server-status (1).js"></script>
-<script src="../assets/youtube.js"></script>
+    <script>
+        async function getLatestVideo() {
+            try {
+                const response = await fetch('/api/youtube'); // Fetch from your Vercel API route
+                const data = await response.json();
+
+                if (data.videoId) {
+                    embedVideo(data.videoId);
+                } else {
+                    document.getElementById('latest-video').innerText = 'No videos found.';
+                }
+            } catch (error) {
+                document.getElementById('latest-video').innerText = 'Error fetching video.';
+            }
+        }
+
+        function embedVideo(videoId) {
+            const videoEmbedHTML = `
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+            `;
+            document.getElementById('latest-video').innerHTML = videoEmbedHTML;
+        }
+
+        // Fetch and display the latest video
+        getLatestVideo();
+    </script>
 </html>
