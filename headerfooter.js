@@ -51,7 +51,7 @@ function handleResize() {
 
     function updateNav() {
         if (window.innerWidth <= 634) {
-            navLinks.innerHTML = '<i class="fa-solid fa-bars"></i>';  // Replace with the hamburger icon
+            navLinks.innerHTML = '<a href="mobile/menu.html"><i class="fa-solid fa-bars"></i></a>';  // Replace with theicon
         } else {
             navLinks.innerHTML = originalContent;  // Restore original content when screen is larger
         }
