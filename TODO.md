@@ -4,3 +4,4 @@
 - finish main page
 - finish subpages
 - fix font-awesome not working on subpages
+- mobile support (in progress)
