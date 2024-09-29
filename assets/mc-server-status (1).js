@@ -33,7 +33,7 @@ class MinecraftServerElement extends HTMLElement {
         style.textContent = `
             @font-face {
                 font-family: 'Monocraft';
-                src: url('https://github.com/IdreesInc/Monocraft/releases/download/v4.0/Monocraft.ttc') format('truetype-collection');
+                src: url('Monocraft.ttf') format('truetype-collection');
                 font-weight: normal;
                 font-style: normal;
             }
