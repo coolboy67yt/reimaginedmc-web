@@ -8,6 +8,44 @@
     <link rel="stylesheet" href="pages.css">
     <link rel="icon" type="image/png" href="assets/img/logo-square.png">
     <script src="https://kit.fontawesome.com/2ff1179492.js" crossorigin="anonymous"></script>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two divs per row */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .grid-item {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .grid-item img {
+            width: 100px; /* Set image size */
+            height: auto;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        p {
+            margin: 5px 0 0 0;
+            font-size: 1em;
+        }
+    </style>
 </head>
 <body>
  <!-- Main Content -->
@@ -19,15 +57,49 @@
     </div>
 
     <div class="stuff">
-        <p> This site is still in progress.. </p>
-        <h1>&nbsp;</h1>
-        <h1>&nbsp;</h1>
-        <h1>&nbsp;</h1>
-        <h1>&nbsp;</h1>
-        <h1>&nbsp;</h1>
-        <h1>&nbsp;</h1>
-        <h1>&nbsp;</h1>
-        <h1>&nbsp;</h1>
+        <h1> Our Staff List </h1>
+        <!-- Add the grid here -->
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="https://mc-heads.net/avatar/Pacerman29" alt="Pacerman29">
+                <div class="text-container">
+                    <h2>Pacerman29</h2>
+                    <p>Owner</p>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <img src="https://mc-heads.net/avatar/coolboy67yt" alt="coolboy67yt">
+                <div class="text-container">
+                    <h2>coolboy67yt</h2>
+                    <p>Manager</p>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <img src="https://mc-heads.net/avatar/CatGuy666" alt="CatGuy666">
+                <div class="text-container">
+                    <h2>CatGuy666</h2>
+                    <p>Head Builder</p>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <img src="https://mc-heads.net/avatar/officer1331" alt="officer1331">
+                <div class="text-container">
+                    <h2>officer1331</h2>
+                    <p>Admin</p>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <img src="https://mc-heads.net/avatar/MumboJumboWumbo" alt="MumboJumboWumbo">
+                <div class="text-container">
+                    <h2>MumboJumboWumbo</h2>
+                    <p>Mod</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
     
