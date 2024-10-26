@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assets/img</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 16px;
+            max-width: 90vw;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: #ffffff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .filename {
+            margin-top: 8px;
+            font-size: 0.9em;
+            color: #333;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <a href="backgrounds/index.html"><div class="grid-item">
+            <h1>/backgrounds/</h1>
+            <div class="filename"></div>
+        </div></a>
+        <a href="screenshots/index.html"><div class="grid-item">
+            <h1>/screenshots/</h1>
+            <div class="filename"></div>
+        </div></a>
+        <div class="grid-item">
+            <img src="flat-logo.png">
+            <div class="filename">flat-logo.png</div>
+        </div>
+        <div class="grid-item">
+            <img src="isometric-logo.png">
+            <div class="filename">isometric-logo.png</div>
+        </div>
+        <div class="grid-item">
+            <img src="logo-old.png">
+            <div class="filename">logo-old.png</div>
+        </div>
+        <div class="grid-item">
+            <img src="logo-square.png">
+            <div class="filename">logo-square.png</div>
+        </div>
+        <div class="grid-item">
+            <img src="logo.png">
+            <div class="filename">logo.png</div>
+        </div>
+        <div class="grid-item">
+            <img src="minefort.png">
+            <div class="filename">minefort.png</div>
+        </div>
+    </div>
+
+</body>
+</html>
