@@ -1,5 +1,4 @@
 # It's happenin'.
--# @everyone
 After some work, I have grabbed the latest versions of all the plugins we need. However, it's not that simple. :(
 
 ## So what is happening?
