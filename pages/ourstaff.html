@@ -6,6 +6,7 @@
     <title>ReimaginedMC</title>
     <link rel="stylesheet" href="../assets/styles.css">
     <link rel="stylesheet" href="pages.css">
+
     <link rel="icon" type="image/png" href="assets/img/logo-square.png">
     <script src="https://kit.fontawesome.com/2ff1179492.js" crossorigin="anonymous"></script>
     <style>
@@ -17,12 +18,34 @@
         }
 
         .grid-item {
-            display: flex;
-            align-items: center;
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 8px;
-        }
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative; /* Required for the pseudo-element positioning */
+    overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+.grid-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../assets/img/screenshots/city2.png");
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Adjust blur intensity as needed */
+    z-index: 0; /* Places the pseudo-element below the content */
+}
+
+.grid-item > * {
+    position: relative;
+    z-index: 1; /* Ensures the text or other content is above the blurred background */
+}
+
 
         .grid-item img {
             width: 100px; /* Set image size */
@@ -50,7 +73,7 @@
 <body>
  <!-- Main Content -->
  <div class="content">
-    <div class="banner" style="background-image: url('../assets/img/screenshots/staff.png');">
+    <div class="banner" style="background-image: url('../assets/img/screenshots/staff1.png');">
         <section id="home">
             <h1 style="color: white;">ReimaginedMC staff</h1>
         </section>
