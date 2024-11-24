@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="pages.css">
     <link rel="icon" type="image/png" href="assets/img/logo-square.png">
     <script src="https://kit.fontawesome.com/2ff1179492.js" crossorigin="anonymous"></script>
+    <style>
+        /* CSS to center the iframe horizontally */
+        .iframe-container {
+            display: flex;
+            justify-content: center; /* Centers iframe horizontally */
+        }
+
+        iframe {
+            width: 800px;
+            height: 410px;
+        }
+    </style>
 </head>
 <body>
  <!-- Main Content -->
@@ -18,11 +30,12 @@
         </section>
     </div>
 
-    <iframe src="carousel-iframe.html" style="width:800px; height:410px;">
+    <!-- Container for the iframe -->
+    <div class="iframe-container">
+        <iframe src="carousel-iframe.html"></iframe>
+    </div>
 
-    </iframe>
     <h1>If you want your build shown here, post it in our discord server!</h1>
-
 
 <script src="../headerfooter.js"></script>
 <script src="../assets/mc-server-status (1).js"></script>
