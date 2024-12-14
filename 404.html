@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whoopsies! 404</title>
+    <style>
+        body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f0f0f0;
+            }
+
+            .floating-container {
+                display: inline-block;
+            }
+
+            .floating-image {
+                width: 200px; /* Adjust size as needed */
+                animation: float 3s ease-in-out infinite;
+            }
+
+            @keyframes float {
+                0%, 100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-20px); /* Adjust floating height */
+                }
+            }
+    </style>
 </head>
 <body>
-    <img src="assets/img/cb-404.png" height="300px">
+    <div class="floating-container">
+        <img src="assets/img/cb-404.png" height="300px" class="floating-image">
+    </div>
     <h1>404</h1>
     <a href="home.html"><button>Home page</button></a>
 </body>
