@@ -1,7 +1,0 @@
-- make an announcement system for news
-- fix the favicon not showing on subpages
-- fix the sizing of the carosel on showcase page
-- finish main page
-- finish subpages
-- fix font-awesome not working on subpages
-- mobile support (in progress)
